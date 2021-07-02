@@ -10,5 +10,21 @@ module.exports = {
   plugins: [
   ],
   rules: {
+    'eol-last': 0,
+    "vue/html-indent": ["error", 2, {
+      "baseIndent": 1,
+    }],
+    'no-empty-pattern': 'off',
+    semi: 'off',
+    "no-tabs":"off",
+    'vue/no-parsing-error': [2, { 'x-invalid-end-tag': false }],
+    "prefer-promise-reject-errors": "off",
+    'vue/max-attributes-per-line': ['error', {
+      singleline: 3,
+      multiline: {
+        max: 3,
+        allowFirstLine: true
+      }
+    }]
   }
 }
