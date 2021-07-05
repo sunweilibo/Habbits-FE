@@ -8,8 +8,8 @@
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
   </p>
 
-  <button type="button" @click="state.count++">
-    count is: {{ state.count }}
+  <button type="button" @click="newCount++">
+    count is: {{ newCount }}
   </button>
   <p>
     Edit
@@ -17,14 +17,26 @@
   </p>
 </template>
 
-<script setup>
-import { defineProps, reactive } from 'vue'
+<script>
+import { ref, reactive } from 'vue'
 
-defineProps({
-  msg: String
-})
+export default {
+  props: {
+    msg: {
+      type: String,
+      default: 'hhhh'
+    }
+  },
+  setup (props) {
+    const newCount = ref(0)
+    const state = reactive({ count: 0 })
+    return { state, newCount }
+  }
+}
 
-const state = reactive({ count: 0 })
+// defineProps({
+//   msg: String
+// }),
 </script>
 
 <style scoped>
