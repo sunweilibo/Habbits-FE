@@ -1,5 +1,9 @@
 import axios from 'axios'
 
+// axios.interceptors.response.use(res => {
+//   if (res.status === 200)
+// })
+
 // axios.interceptors.request.use(options => {
 //   options
 // })

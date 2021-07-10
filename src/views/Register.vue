@@ -48,9 +48,12 @@ export default {
   align-items: center;
   background: #ddd;
   .content{
+    position: relative;
+    width: 360px;
+    height: 400px;
     background: #fff;
     border-radius: 8px;
-    padding: 60px 40px 40px;
+    padding: 40px;
   }
 }
 </style>
